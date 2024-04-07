@@ -12,7 +12,7 @@
 
 <div id="navbar">
   <div id="deer-wrapper">
-    <img src="/deer.png" alt="A deer silhouette" />
+    <img src="/photos/deer.png" alt="A deer silhouette" />
   </div>
   <div id="leftlogo"></div>
   <div id="textlogo">
