@@ -1,15 +1,26 @@
-name: Rebuild GitHub Pages
+name: Deploy GitHub Pages
 on:
   push:
+    workflow_dispatch:
     branches:
       - main
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
 jobs: 
-  publish:
+  deploy:
     runs-on: ubuntu-latest
-    name: Publish GitHub Pages
+    name: Build and Deploy
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Fetch Sources
         uses: actions/checkout@v4
@@ -18,8 +29,10 @@ jobs:
         with:
           node-version: '21.x'
       - run: npm install && npm run build
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4.5.0
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          branch: gh-pages
-          folder: build
+          path: 'build'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
