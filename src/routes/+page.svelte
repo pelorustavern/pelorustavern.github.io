@@ -28,7 +28,7 @@
 <div style="position: relative; top: 100px; width: 90%; margin-left: 5%; margin-right: 5%">
   <Router {routes} />
 </div>
-<div style="position: relative; top: 100px">
+<div style="position: relative; margin-top: auto">
   <Footer/>
 </div>
 

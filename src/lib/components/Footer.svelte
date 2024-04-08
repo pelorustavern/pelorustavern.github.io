@@ -20,9 +20,11 @@
   #wrapper {
     border-top: 1px solid black;
     width: 90%;
-    margin: 0 5% 40px 5%;
+    margin: 105px 5% 0 5%;
     padding-top: 15px;
     padding-bottom: 30px;
+    position: sticky;
+    bottom: 0;
   }
 
   p {
