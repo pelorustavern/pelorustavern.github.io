@@ -16,7 +16,7 @@
   </div>
   <div id="leftlogo"></div>
   <div id="textlogo">
-    <h1><a href="/">The<br>Pelorus<br>Tavern</a></h1>
+    <h1><a href="/#/">The<br>Pelorus<br>Tavern</a></h1>
   </div>
   <div class="links">
   {#each links as link}

@@ -2,6 +2,12 @@
   import MarkdownComponent from "$lib/components/MarkdownComponent.svelte";
   import menuMarkdown from "$lib/Menu.md?raw";
   import takeawayMarkdown from "$lib/Takeaway.md?raw";
+  import { onMount } from "svelte";
+  import { title } from "$lib/stores.js";
+
+  onMount(() => {
+    $title = "";
+  })
 </script>
 
 <div id="wrapper">

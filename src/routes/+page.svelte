@@ -11,6 +11,7 @@
   import Redirect from "$lib/views/Redirect.svelte";
   import ComingSoon from "$lib/views/ComingSoon.svelte";
   import Router from 'svelte-spa-router';
+  import { title } from "$lib/stores.js";
 
   const routes = {
     "/": Home,
@@ -22,7 +23,13 @@
     "/#/*": Redirect,
     "*": NotFound,
   }
+
+  $: titleD = $title + ($title == "" ? "" : " | ") + "The Pelorus Tavern"
 </script>
+
+<svelte:head>
+  <title>{titleD}</title>
+</svelte:head>
 
 <Navbar />
 <div style="position: relative; top: 100px; width: 90%; margin-left: 5%; margin-right: 5%">

@@ -1,3 +1,12 @@
+<script lang="ts">
+  import { onMount } from "svelte";
+  import { title } from "$lib/stores.js";
+
+  onMount(() => {
+    $title = "";
+  });
+</script>
+
 <div id="wrapper">
   <p>Coming soon...</p>
 </div>
