@@ -1,0 +1,8 @@
+- Seven powered sites
+- NZMCA members welcome
+- Self contained vehicles only
+- $15 per night for a powered site
+- Free parking for non powered sites
+- Large vehicle access
+- Park as you please out back, be aware that during heavy rain, it is better to park on the gravel.
+- 7 Night max stay 
